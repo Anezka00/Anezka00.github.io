@@ -60,11 +60,12 @@ body > main article  {
 #main-content {
     display:flex;
     justify-content: space-around;
+    grid-area: main;
 
 }
 
 #main-content > div {
-    width: 70%;
+    width: 80%;
 
 }
 
@@ -97,6 +98,14 @@ body > footer {
     
 }
 
+#bottom{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
 #footer-ul > div > li  {
     margin-left: 12px;
     color: white;
@@ -107,4 +116,32 @@ body > footer {
 #footer-ul > div > li > a  {
     color: white;
     text-decoration: none;
+}
+
+#main-header {
+    grid-area: header;
+}
+
+#art1{
+    grid-area: art1;
+}
+
+#art2{
+    grid-area: art2;
+}
+
+#art3{
+    grid-area: art3;
+}
+
+
+
+
+#grid-container {
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "art1 art2 art3"
+    "filter contact contact";
+    grid-template-columns: 3fr 7fr;
 }
